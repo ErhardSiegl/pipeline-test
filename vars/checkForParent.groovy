@@ -1,7 +1,6 @@
 #!/usr/bin/env groovy
 import groovy.json.JsonSlurper
 import java.net.HttpURLConnection
-import groovy.cli.commons.CliBuilder
 
 /**
  * Dependency-Track project checker
@@ -136,7 +135,7 @@ def resolveProjectUuid = { String uuid, String name, String version ->
  * Process the command line
  * ----------------------------------------------------- */
 def handleOptions = { args ->
-  def cli = new CliBuilder(
+  def cli = new groovy.cli.commons.CliBuilder(
     usage: 'check-parent.groovy [options]', 
     footer: 
 '''function: Checks wether a Dependency-Track project has a parent project defined.
