@@ -24,6 +24,11 @@ class DtUtils {
 def dtrackUrl   = (System.getenv("DT_API_URL") ?: "").trim()
 def apiKey      = (System.getenv("DT_API_KEY") ?: "").trim()
 
+def connectWith( String url, String key){
+  dtrackUrl = url
+  apiKey = key
+}
+
 /* -------------------------------------------------------
  * Debugging and Error Handling^
  * ----------------------------------------------------- */

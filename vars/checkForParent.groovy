@@ -1,9 +1,10 @@
 #!/usr/bin/env groovy
 import at.gepardec.DtUtils
 
-def call(String projectName, String projectVer = null) {
+def call(String url, String key, String projectName, String projectVer = null) {
 
   def dt = new DtUtils()
+  dt.connectWith(url, key)
   dt.dTcheckForParent( projectName, projectVer, null)
 }
 
