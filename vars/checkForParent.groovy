@@ -5,7 +5,7 @@ def call(String url, String key, String projectName, String projectVer = null) {
 
   def dt = new DtUtils()
   dt.connectWith(url, key)
-  dt.dTcheckForParent( projectName, projectVer, (String)null)
+  dt.dTcheckForParent1( projectName, projectVer)
 }
 
 

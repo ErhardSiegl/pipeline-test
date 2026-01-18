@@ -179,8 +179,8 @@ def handleOptions = { args ->
 /* -------------------------------------------------------
  * do the check
  * ----------------------------------------------------- */
-def dTcheckForParent( String projectName, String projectVer ){
-  dTcheckForParent(projectName, projectVer, null)
+def dTcheckForParent1( String projectName, String projectVer ){
+  dTcheckForParent(projectName, projectVer, (String) null)
 }
 
 def dTcheckForParent( String projectName, String projectVer, String projectUuid ){
