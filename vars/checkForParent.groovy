@@ -135,7 +135,9 @@ def resolveProjectUuid = { String uuid, String name, String version ->
  * Process the command line
  * ----------------------------------------------------- */
 def handleOptions = { args ->
-  def cli = new groovy.cli.commons.CliBuilder(
+  def cliBuilder = "groovy.cli.commons.CliBuilder" as Class
+  
+  def cli = cliBuilder.newInstance(
     usage: 'check-parent.groovy [options]', 
     footer: 
 '''function: Checks wether a Dependency-Track project has a parent project defined.
