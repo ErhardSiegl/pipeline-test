@@ -1,7 +1,7 @@
 #!/usr/bin/env groovy
 
 import hudson.model.*
-import hudson.util.TaskListener
+import hudson.model.TaskListener
  
 def call(String name = 'human') {
 
