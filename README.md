@@ -4,7 +4,7 @@ Test Grooovy-script in Jenkins Pipeline
 
 ## Setup instructions
 
-1. In Jenkins, go to Manage Jenkins &rarr; System &rarr; Global Untrusted Pipeline Libraries
+1. In Jenkins, go to Manage Jenkins &rarr; System &rarr; Global Trusted Pipeline Libraries
 
     - Name: `pipeline-test`
 
