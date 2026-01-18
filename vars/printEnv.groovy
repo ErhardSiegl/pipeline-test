@@ -6,7 +6,6 @@ import hudson.model.TaskListener
 def call(String name = 'human') {
 
   echo "Env, ${name}."
-  println(System.env)
 
   def build = Thread.currentThread().executable
   def envVars = build.getEnvironment(TaskListener.NULL)
