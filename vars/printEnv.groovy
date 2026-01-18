@@ -1,7 +1,6 @@
 #!/usr/bin/env groovy
 
-
-def call() {
-  echo "Printing Environment"
+def call(String name = 'human') {
+  echo "Hello, ${name}."
 }
 
