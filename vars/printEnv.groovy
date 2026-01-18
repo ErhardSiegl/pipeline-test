@@ -1,7 +1,5 @@
 #!/usr/bin/env groovy
 
-import hudson.model.*
-import hudson.model.TaskListener
  
 def call(String name = 'human') {
 
@@ -13,3 +11,11 @@ def call(String name = 'human') {
   echo "All: ${envVars}."
 }
 
+def inJenkins = System.env['JENKINS_HOME'] != null
+
+if ( inJenkins ){
+  println( "Running in Jenkins")
+}
+else{
+  println( "Running standalone")
+}
