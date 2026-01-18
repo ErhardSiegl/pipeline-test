@@ -1,5 +1,6 @@
 #!/usr/bin/env groovy
 
+import at.gepardec.GlobalVariables
  
 def call(String name = 'human') {
 

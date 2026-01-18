@@ -1,5 +1,5 @@
 #!/usr/bin/env groovy
-package at.gepardec.GlobalVariables
+package at.gepardec
 
 class GlobalVariables {
    static String foo = "bar"
