@@ -183,7 +183,7 @@ def dTcheckForParent1( String projectName, String projectVer ){
   dTcheckForParent(projectName, projectVer, (String) null)
 }
 
-def dTcheckForParent( String projectName, String projectVer, String projectUuid ){
+boolean dTcheckForParent( String projectName, String projectVer, String projectUuid ){
   def uuid = resolveProjectUuid( projectUuid, projectName, projectVer)
   if (!uuid) {
     fatal("Project not found (no UUID resolved).")
@@ -201,8 +201,10 @@ def dTcheckForParent( String projectName, String projectVer, String projectUuid 
 
   if (parentObj || parentUuid) {
     println("OK: Parent project is set. parentUuid=${parentUuid ?: '(embedded parent object)'}")
+    return true
   } else {
     System.err.println("FAIL: No parent project set for project uuid=${uuid} (name=${project?.name}, version=${project?.version})")
+    return false
   }
 }
 
