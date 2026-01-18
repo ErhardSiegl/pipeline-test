@@ -179,7 +179,7 @@ def handleOptions = { args ->
 /* -------------------------------------------------------
  * do the check
  * ----------------------------------------------------- */
-def dTcheckForParent = { String projectName, String projectVer, String projectUuid ->
+def dTcheckForParent( String projectName, String projectVer, String projectUuid ){
   def uuid = resolveProjectUuid( projectUuid, projectName, projectVer)
   if (!uuid) {
     fatal("Project not found (no UUID resolved).")
