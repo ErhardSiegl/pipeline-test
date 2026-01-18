@@ -1,0 +1,17 @@
+@Library('pipeline-test')_
+
+import at.gepardec.GlobalVariables
+
+pipeline {
+    agent any
+    stages {
+        stage('Demo') {
+            steps {
+                echo 'Start Demo'
+                sayHello 'Gepard'
+
+                echo 'The value of foo is : ' + GlobalVariables.foo
+            }
+        }
+    }
+}
