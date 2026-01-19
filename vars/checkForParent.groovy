@@ -5,7 +5,7 @@ def call() {
 
   call(
         env.deptrack_url,
-        deptrack_api_key,
+        env.deptrack_api_key,
         env.deptrack_project,
         env.deptrack_version
   )
