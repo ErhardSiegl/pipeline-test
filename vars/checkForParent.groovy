@@ -1,6 +1,16 @@
 #!/usr/bin/env groovy
 import at.gepardec.DtUtils
 
+def call() {
+
+  call(
+        env.deptrack_url,
+        deptrack_api_key,
+        env.deptrack_project,
+        env.deptrack_version
+  )
+}
+
 def call(String url, String key, String projectName, String projectVer = null) {
 
   def dt = new DtUtils()
