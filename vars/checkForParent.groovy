@@ -18,6 +18,9 @@ def call(String url, String key, String projectName, String projectVer = null) {
   if ( !dt.dTcheckForParent1( projectName, projectVer) ){
     throw new RuntimeException( "FAIL: ${projectName} ${projectVer} failed")
   }
+  else{
+    echo "OK: checkForParent ${projectName} ${projectVer}"
+  }
 }
 
 
